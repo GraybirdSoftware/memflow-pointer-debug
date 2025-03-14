@@ -1,0 +1,8 @@
+[package]
+name = "memflow-pointer-debug"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+memflow = "0.2.0"
+memflow-pointer-debug-derive = { path = "./derive" }

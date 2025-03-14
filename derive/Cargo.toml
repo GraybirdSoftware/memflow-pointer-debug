@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-quote = "=1.0.40"
+quote = "=1.0"
 syn = { version = "1.0", features = ["full"] }
 
 

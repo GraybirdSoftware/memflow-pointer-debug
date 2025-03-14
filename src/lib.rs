@@ -82,7 +82,6 @@ impl<T: DerefDebugPrint> PointerPrint for T {
     fn pointer_print_with_depth<M: MemoryView>(&self, mem: &mut M, max_depth: usize) {
         // Create a new HashSet to track visited addresses
         let mut visited_addresses = HashSet::new();
-        let mut is_pointer_deref = false;
 
         // Call the internal method with initial depth 0
         self.pointer_debug_internal(mem, 0, max_depth, &mut visited_addresses);

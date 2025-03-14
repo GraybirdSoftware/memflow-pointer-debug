@@ -586,7 +586,7 @@ name = "memflow-pointer-debug-derive"
 version = "0.1.0"
 dependencies = [
  "quote",
- "syn 2.0.100",
+ "syn 1.0.109",
 ]
 
 [[package]]

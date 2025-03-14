@@ -14,13 +14,14 @@ use std::collections::HashSet;
 /// This trait is marked as `#[doc(hidden)]` because it's not intended to be used directly.
 /// Instead, use the [`PointerPrint`] trait which provides a more user-friendly interface
 pub trait DerefDebugPrint {
-    fn pointer_debug_internal<M: ::memflow::mem::MemoryView>(
+    fn pointer_debug_internal<M>(
         &self,
         mem: &mut M,
         depth: usize,
         max_depth: usize,
         visited_addresses: &mut ::std::collections::HashSet<u64>,
-    );
+    ) where
+        M: memflow::mem::MemoryView;
 }
 
 /// High-level trait for printing data structures with automatic pointer dereferencing.
